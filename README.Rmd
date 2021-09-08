@@ -1,0 +1,134 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# ngboost
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of ngboost is to ...
+
+## Installation
+
+You can install the released version of ngboost from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("ngboost")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("Akai01/ngboost")
+```
+## Example
+
+A probabilistic regression example on the Boston housing dataset: 
+
+```{r example_regression}
+library(ngboost)
+
+data(Boston, package = "MASS")
+
+dta <- rsample::initial_split(Boston)
+
+train <- rsample::training(dta)
+
+test <- rsample::testing(dta)
+
+
+x_train = train[,1:13]
+y_train = train[,14]
+
+x_test = test[,1:13]
+y_test = test[,14]
+
+
+model <- NGBRegression$new(Dist = Dist("Exponential"),
+                           Base=DecisionTreeRegressor(
+                             criterion="mae",
+                             min_samples_split=2,
+                             min_samples_leaf=1,
+                             min_weight_fraction_leaf=0.0,
+                             max_depth=5,
+                             splitter="best",
+                             random_state=NULL),
+                           Score = Scores("MLE"),
+                           natural_gradient=TRUE,
+                           n_estimators= 600,
+                           learning_rate= 0.002,
+                           minibatch_frac= 0.8,
+                           col_sample= 0.9,
+                           verbose=TRUE,
+                           verbose_eval=100,
+                           tol=1e-5)
+
+model$fit(X = x_train, Y = y_train, X_val = x_test, Y_val = y_test)
+
+model$feature_importances()
+
+model$plot_feature_importance()
+
+model$predict(x_test)%>%head()
+
+```
+
+Classification example:
+
+```{r example_class}
+
+data(BreastCancer, package = "mlbench")
+
+dta <- na.omit(BreastCancer)
+
+dta <- rsample::initial_split(dta)
+
+train <- rsample::training(dta)
+
+test <- rsample::testing(dta)
+
+x_train = train[,2:10]
+y_train = as.integer(train[,11])
+
+x_test = test[,2:10]
+y_test = as.integer(test[,11])
+
+
+model <- NGBClassifier$new(Dist = Dist("k_categorical", K = 3),
+                           Base=DecisionTreeRegressor(criterion='friedman_mse', 
+                                                      max_depth=2),
+                           Score = Scores("LogScore"),
+                           natural_gradient=TRUE,
+                           n_estimators=500,
+                           learning_rate=0.01,
+                           minibatch_frac=1.0,
+                           col_sample=0.2,
+                           verbose=TRUE,
+                           verbose_eval=100,
+                           tol=1e-5,
+                           random_state = NULL)
+
+model$fit(x_train, y_train, X_val = x_test, Y_val = y_test)
+
+model$feature_importances()
+
+model$plot_feature_importance()
+
+model$predict(x_test)
+
+model$predict_proba(x_test)%>%head()
+
+```
