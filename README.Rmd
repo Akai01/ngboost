@@ -18,13 +18,20 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of ngboost is to ...
+The goal of ngboost is to provide an R interface for the Python package [NGBoost](https://stanfordmlgroup.github.io/ngboost/intro.html). 
+
+# What is Natural Gradient Boosting?
+
+"NGBoost is a method for probabilistic prediction with competitive state-of-the-art performance on a variety of datasets. NGBoost combines a multiparameter boosting algorithm with the natural gradient to efficiently estimate how parameters of the presumed outcome distribution vary with the observed features. NGBoost performs as well as existing methods for probabilistic regression but retains major advantages: NGBoost is flexible, scalable, and easy-to-use." (From the paper, Duan, et at., 2019, [see here](https://arxiv.org/pdf/1910.03225.pdf))
+
 
 ## Installation
 
 You can install the released version of ngboost from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
+# not yet
+
 install.packages("ngboost")
 ```
 

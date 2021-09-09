@@ -1,2 +1,4 @@
 ^README\.Rmd$
 ^LICENSE\.md$
+^ngboost\.Rproj$
+^\.Rproj\.user$

@@ -6,7 +6,19 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of ngboost is to …
+The goal of ngboost is to provide an R interface for the Python package
+[NGBoost](https://stanfordmlgroup.github.io/ngboost/intro.html).
+
+# What is Natural Gradient Boosting?
+
+“NGBoost is a method for probabilistic prediction with competitive
+state-of-the-art performance on a variety of datasets. NGBoost combines
+a multiparameter boosting algorithm with the natural gradient to
+efficiently estimate how parameters of the presumed outcome distribution
+vary with the observed features. NGBoost performs as well as existing
+methods for probabilistic regression but retains major advantages:
+NGBoost is flexible, scalable, and easy-to-use.” (From the paper, Duan,
+et at., 2019, [see here](https://arxiv.org/pdf/1910.03225.pdf))
 
 ## Installation
 
@@ -14,6 +26,8 @@ You can install the released version of ngboost from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
+# not yet
+
 install.packages("ngboost")
 ```
 
@@ -71,19 +85,19 @@ model$fit(X = x_train, Y = y_train, X_val = x_test, Y_val = y_test)
 
 model$feature_importances()
 #>    features  importance
-#> 1      crim 0.125504508
-#> 2        zn 0.001399451
-#> 3     indus 0.016686236
-#> 4      chas 0.002859840
-#> 5       nox 0.049822439
-#> 6        rm 0.235286212
-#> 7       age 0.034050521
-#> 8       dis 0.079066886
-#> 9       rad 0.007477527
-#> 10      tax 0.029422204
-#> 11  ptratio 0.046575556
-#> 12    black 0.038713291
-#> 13    lstat 0.333135329
+#> 1      crim 0.115444512
+#> 2        zn 0.001558982
+#> 3     indus 0.016630919
+#> 4      chas 0.003251259
+#> 5       nox 0.047643536
+#> 6        rm 0.220264905
+#> 7       age 0.051876137
+#> 8       dis 0.077110612
+#> 9       rad 0.007851554
+#> 10      tax 0.027225091
+#> 11  ptratio 0.045092450
+#> 12    black 0.035865116
+#> 13    lstat 0.350184928
 
 model$plot_feature_importance()
 ```
@@ -92,7 +106,7 @@ model$plot_feature_importance()
 
 ``` r
 model$predict(x_test)%>%head()
-#> [1] 19.69189 21.79518 21.40581 20.36676 20.96166 21.47816
+#> [1] 24.53977 17.33471 19.09419 19.21961 16.15626 15.68390
 ```
 
 Classification example:
@@ -132,25 +146,25 @@ model <- NGBClassifier$new(Dist = Dist("k_categorical", K = 3),
 model$fit(x_train, y_train, X_val = x_test, Y_val = y_test)
 
 model$feature_importances()
-#>           features   importance
-#> 1     Cl.thickness 5.071335e-02
-#> 2        Cell.size 5.071335e-02
-#> 3       Cell.shape 2.994107e-01
-#> 4    Marg.adhesion 2.994107e-01
-#> 5     Epith.c.size 1.920985e-01
-#> 6      Bare.nuclei 1.920985e-01
-#> 7      Bl.cromatin 7.606987e-02
-#> 8  Normal.nucleoli 7.606987e-02
-#> 9          Mitoses 1.159158e-01
-#> 10    Cl.thickness 1.159158e-01
-#> 11       Cell.size 1.743263e-01
-#> 12      Cell.shape 1.743263e-01
-#> 13   Marg.adhesion 2.729096e-07
-#> 14    Epith.c.size 2.729096e-07
-#> 15     Bare.nuclei 7.335305e-02
-#> 16     Bl.cromatin 7.335305e-02
-#> 17 Normal.nucleoli 1.811214e-02
-#> 18         Mitoses 1.811214e-02
+#>           features importance
+#> 1     Cl.thickness 0.02664848
+#> 2        Cell.size 0.02664848
+#> 3       Cell.shape 0.17577695
+#> 4    Marg.adhesion 0.17577695
+#> 5     Epith.c.size 0.47092396
+#> 6      Bare.nuclei 0.47092396
+#> 7      Bl.cromatin 0.05329669
+#> 8  Normal.nucleoli 0.05329669
+#> 9          Mitoses 0.07994497
+#> 10    Cl.thickness 0.07994497
+#> 11       Cell.size 0.06016697
+#> 12      Cell.shape 0.06016697
+#> 13   Marg.adhesion 0.07994492
+#> 14    Epith.c.size 0.07994492
+#> 15     Bare.nuclei 0.03997264
+#> 16     Bl.cromatin 0.03997264
+#> 17 Normal.nucleoli 0.01332443
+#> 18         Mitoses 0.01332443
 
 model$plot_feature_importance()
 ```
@@ -159,18 +173,18 @@ model$plot_feature_importance()
 
 ``` r
 model$predict(x_test)
-#>   [1] 0 1 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 0 1 0 1 1 1 0 0 1 1 1 0 1 1 0 1 1 1 1 1
-#>  [38] 0 1 0 1 1 1 1 0 1 0 0 0 1 1 1 0 0 1 1 1 1 1 0 0 1 0 1 0 1 0 0 1 1 0 0 1 0
-#>  [75] 0 0 1 1 1 0 0 1 0 0 0 1 1 0 0 0 0 1 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 0 1 1
-#> [112] 0 1 1 0 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 0 0 1 0 1 0
-#> [149] 0 0 0 1 1 0 1 0 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1
+#>   [1] 1 0 1 1 0 0 1 1 1 1 1 1 1 0 0 0 0 0 1 1 1 1 1 1 1 0 0 1 0 1 0 1 0 1 0 1 0
+#>  [38] 0 1 1 1 0 0 0 1 1 0 1 1 0 0 1 1 1 1 1 0 1 1 1 0 0 0 0 1 1 1 0 0 0 0 0 1 1
+#>  [75] 0 0 1 0 0 1 0 1 1 0 1 1 0 0 0 1 1 1 1 1 0 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1
+#> [112] 1 1 1 1 0 1 0 1 1 0 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 0 0 0 1 1 1 0 0 0
+#> [149] 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 0
 
 model$predict_proba(x_test)%>%head()
 #>           [,1]      [,2]        [,3]
-#> [1,] 0.4220713 0.2358462 0.342082463
-#> [2,] 0.4272186 0.5690774 0.003703998
-#> [3,] 0.4387813 0.2722508 0.288967864
-#> [4,] 0.4375308 0.2533761 0.309093096
-#> [5,] 0.4294157 0.5583585 0.012225786
-#> [6,] 0.4272186 0.5690774 0.003703989
+#> [1,] 0.4176584 0.5778545 0.004487127
+#> [2,] 0.4367354 0.3276329 0.235631677
+#> [3,] 0.4298751 0.5648983 0.005226627
+#> [4,] 0.4116954 0.5841936 0.004110936
+#> [5,] 0.4553031 0.4428733 0.101823540
+#> [6,] 0.3968299 0.2351165 0.368053608
 ```
