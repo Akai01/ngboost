@@ -5,7 +5,7 @@
 \alias{ngboost}
 \title{R interface for NGBoost package}
 \format{
-An object of class \code{NULL} of length 0.
+An object of class \code{python.builtin.module} (inherits from \code{python.builtin.object}) of length 2.
 }
 \usage{
 ngboost

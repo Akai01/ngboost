@@ -1,6 +1,6 @@
 test_that("NGBRegression", {
   library(ngboost)
-
+  use_condaenv("r-reticulate")
   set.seed(42)
 
   y_train = rnorm(100, 10, 1)
@@ -14,8 +14,9 @@ test_that("NGBRegression", {
                       x3 = rnorm(20, 13, 1))
   y_val = rnorm(20, 10, 1)
 
+  my_dist <- Dist("Exponential")
 
-  model <- NGBRegression$new(Dist = Dist("Exponential"),
+  model <- NGBRegression$new(Dist = my_dist,
                              Base=DecisionTreeRegressor(
                                criterion="mae",
                                min_samples_split=2,
