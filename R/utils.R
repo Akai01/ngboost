@@ -1,7 +1,3 @@
-.onLoad <- function(libname, pkgname){
-  reticulate::configure_environment(pkgname, force = TRUE)
-}
-
 #' Pipe operator
 #'
 #' See \code{magrittr::\link[magrittr:pipe]{\%>\%}} for details.

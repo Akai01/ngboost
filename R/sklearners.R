@@ -59,7 +59,7 @@ DecisionTreeRegressor <- function(
   splitter="best",
   random_state=NULL){
 
-  sklearn <- reticulate::import("sklearn")
+  #sklearn <- reticulate::import("sklearn")
   sklearn$tree$DecisionTreeRegressor(criterion=criterion,
                 min_samples_split=as.integer(min_samples_split),
                 min_samples_leaf=as.integer(min_samples_leaf),
@@ -87,7 +87,7 @@ Ridge <- function(
   random_state=NULL
 ){
 
-  sklearn <- reticulate::import("sklearn")
+  #sklearn <- reticulate::import("sklearn")
   sklearn$linear_model$Ridge(alpha=alpha,
                        random_state=random_state)
 }

@@ -101,7 +101,7 @@ NGBRegression <- R6::R6Class(
       private$tol <- tol
       private$random_state <- random_state
 
-      ngboost <- reticulate::import("ngboost")
+      #ngboost <- reticulate::import("ngboost")
       private$model <- ngboost$NGBRegressor(
         Dist = private$Dist,
         Score = private$Score,

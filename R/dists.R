@@ -20,7 +20,7 @@ Dist <- function(dist = c("Bernoulli", "k_categorical", "StudentT", "Poisson",
                           "MultivariateNormal", "Normal"), K){
 
   dist <- match.arg(dist)
-  ngboost <- reticulate::import("ngboost")
+  #ngboost <- reticulate::import("ngboost")
   if(dist=="Normal"){
     out <- ngboost$distns$Normal
   }

@@ -16,6 +16,8 @@ knitr::opts_chunk$set(
 # ngboost
 
 <!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/ngboost)](https://CRAN.R-project.org/package=ngboost)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 The goal of ngboost is to provide an R interface for the Python package [NGBoost](https://stanfordmlgroup.github.io/ngboost/intro.html). 

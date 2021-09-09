@@ -13,7 +13,7 @@
 #' @export
 Scores <- function(score = c("LogScore", "CRPS", "CRPScore", "MLE")){
 
-  scores <- reticulate::import("ngboost.scores")
+  #scores <- reticulate::import("ngboost.scores")
   score <- match.arg(score)
   if(score == "CRPS"){
     out <- scores$CRPS
