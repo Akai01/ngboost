@@ -2,6 +2,7 @@
 
 export("%<>%")
 export("%>%")
+export(.onLoad)
 export(DecisionTreeRegressor)
 export(Dist)
 export(NGBClassifier)
