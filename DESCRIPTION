@@ -21,7 +21,7 @@ Depends:
 Config/reticulate:
   list(
     packages = list(
-      list(package = "ngboost", version = "0.3.12", pip = TRUE)
+      list(package = "ngboost", version = "0.3.12", pip = TRUE, envname = "r-ngboost")
     )
   )
 Suggests: 
