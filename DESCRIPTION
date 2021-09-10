@@ -21,7 +21,7 @@ Depends:
 Config/reticulate:
   list(
     packages = list(
-      list(package = 'ngboost', pip = TRUE)
+      list(package = 'ngboost')
     )
   )
 Suggests: 

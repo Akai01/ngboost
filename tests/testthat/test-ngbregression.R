@@ -1,6 +1,6 @@
+
 test_that("NGBRegression", {
   library(ngboost)
-  use_condaenv("r-reticulate")
   set.seed(42)
 
   y_train = rnorm(100, 10, 1)
