@@ -4,6 +4,13 @@
 \name{ngboost}
 \alias{ngboost}
 \title{R interface for NGBoost package}
+\format{
+An object of class \code{python.builtin.module} (inherits from \code{python.builtin.object}) of length 2.
+}
+\usage{
+ngboost
+}
 \description{
 The goal of ngboost is to provide an R interface for the Python package \href{https://stanfordmlgroup.github.io}{NGBoost}
 }
+\keyword{datasets}

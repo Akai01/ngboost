@@ -19,11 +19,7 @@ Depends:
     reticulate (>= 1.20),
     R (>= 2.10)
 Config/reticulate:
-  list(
-    packages = list(
-      list(package = "ngboost", pip = TRUE)
-    )
-  )
+  list(packages = list(list(package = "ngboost", pip = TRUE, envname = "r-ngboost")))
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
