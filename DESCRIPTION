@@ -19,7 +19,11 @@ Depends:
     reticulate (>= 1.20),
     R (>= 2.10)
 Config/reticulate:
-  list(packages = list(list(package = "ngboost", pip = TRUE, envname = "r-ngboost")))
+  list(
+  packages = list(
+  list(package = 'importlib-metadata', pip = TRUE), 
+  list(package = 'ngboost', pip = TRUE))
+  )
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
