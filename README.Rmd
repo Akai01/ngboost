@@ -16,8 +16,7 @@ knitr::opts_chunk$set(
 # ngboost
 
 <!-- badges: start -->
-[![CRAN status](https://www.r-pkg.org/badges/version/ngboost)](https://CRAN.R-project.org/package=ngboost)
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+
 <!-- badges: end -->
 
 The goal of ngboost is to provide an R interface for the Python package [NGBoost](https://stanfordmlgroup.github.io/ngboost/intro.html). 
@@ -67,23 +66,16 @@ y_test = test[,14]
 
 
 model <- NGBRegression$new(Dist = Dist("Exponential"),
-                           Base=DecisionTreeRegressor(
-                             criterion="mae",
-                             min_samples_split=2,
-                             min_samples_leaf=1,
-                             min_weight_fraction_leaf=0.0,
-                             max_depth=5,
-                             splitter="best",
-                             random_state=NULL),
+                           Base = sklearner(),
                            Score = Scores("MLE"),
-                           natural_gradient=TRUE,
-                           n_estimators= 600,
-                           learning_rate= 0.002,
-                           minibatch_frac= 0.8,
-                           col_sample= 0.9,
-                           verbose=TRUE,
-                           verbose_eval=100,
-                           tol=1e-5)
+                           natural_gradient =TRUE,
+                           n_estimators = 600,
+                           learning_rate = 0.002,
+                           minibatch_frac = 0.8,
+                           col_sample = 0.9,
+                           verbose = TRUE,
+                           verbose_eval = 100,
+                           tol = 1e-5)
 
 model$fit(X = x_train, Y = y_train, X_val = x_test, Y_val = y_test)
 
@@ -97,8 +89,7 @@ model$predict(x_test)%>%head()
 
 Classification example:
 
-```{r example_class}
-
+```{r example_class, echo=TRUE, warning = FALSE, message = FALSE}
 data(BreastCancer, package = "mlbench")
 
 dta <- na.omit(BreastCancer)
@@ -116,18 +107,12 @@ x_test = test[,2:10]
 y_test = as.integer(test[,11])
 
 
-model <- NGBClassifier$new(Dist = Dist("k_categorical", K = 3),
-                           Base=DecisionTreeRegressor(criterion='friedman_mse', 
-                                                      max_depth=2),
+model <- NGBClassifier$new(Dist = Dist("k_categorical", k = 3),
+                           Base = sklearner(),
                            Score = Scores("LogScore"),
-                           natural_gradient=TRUE,
-                           n_estimators=500,
-                           learning_rate=0.01,
-                           minibatch_frac=1.0,
-                           col_sample=0.2,
-                           verbose=TRUE,
-                           verbose_eval=100,
-                           tol=1e-5,
+                           natural_gradient = TRUE,
+                           n_estimators = 100,
+                           tol = 1e-5,
                            random_state = NULL)
 
 model$fit(x_train, y_train, X_val = x_test, Y_val = y_test)

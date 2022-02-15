@@ -4,11 +4,6 @@
 # ngboost
 
 <!-- badges: start -->
-
-[![CRAN
-status](https://www.r-pkg.org/badges/version/ngboost)](https://CRAN.R-project.org/package=ngboost)
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 The goal of ngboost is to provide an R interface for the Python package
@@ -50,7 +45,6 @@ A probabilistic regression example on the Boston housing dataset:
 ``` r
 library(ngboost)
 #> Loading required package: reticulate
-
 data(Boston, package = "MASS")
 
 dta <- rsample::initial_split(Boston)
@@ -68,42 +62,34 @@ y_test = test[,14]
 
 
 model <- NGBRegression$new(Dist = Dist("Exponential"),
-                           Base=DecisionTreeRegressor(
-                             criterion="mae",
-                             min_samples_split=2,
-                             min_samples_leaf=1,
-                             min_weight_fraction_leaf=0.0,
-                             max_depth=5,
-                             splitter="best",
-                             random_state=NULL),
+                           Base = sklearner(),
                            Score = Scores("MLE"),
-                           natural_gradient=TRUE,
-                           n_estimators= 600,
-                           learning_rate= 0.002,
-                           minibatch_frac= 0.8,
-                           col_sample= 0.9,
-                           verbose=TRUE,
-                           verbose_eval=100,
-                           tol=1e-5)
+                           natural_gradient =TRUE,
+                           n_estimators = 600,
+                           learning_rate = 0.002,
+                           minibatch_frac = 0.8,
+                           col_sample = 0.9,
+                           verbose = TRUE,
+                           verbose_eval = 100,
+                           tol = 1e-5)
 
 model$fit(X = x_train, Y = y_train, X_val = x_test, Y_val = y_test)
 
 model$feature_importances()
-#>    features   importance
-#> 1      crim 0.1110526639
-#> 2        zn 0.0009497937
-#> 3     indus 0.0140106194
-#> 4      chas 0.0045951593
-#> 5       nox 0.0527701054
-#> 6        rm 0.2434433816
-#> 7       age 0.0400847775
-#> 8       dis 0.0694444786
-#> 9       rad 0.0072502594
-#> 10      tax 0.0236694992
-#> 11  ptratio 0.0508433396
-#> 12    black 0.0399311867
-#> 13    lstat 0.3419547357
-
+#>    features  importance
+#> 1      crim 0.173127863
+#> 2        zn 0.001288576
+#> 3     indus 0.007806564
+#> 4      chas 0.001329934
+#> 5       nox 0.077946992
+#> 6        rm 0.154315121
+#> 7       age 0.033186137
+#> 8       dis 0.058404260
+#> 9       rad 0.007249823
+#> 10      tax 0.012866860
+#> 11  ptratio 0.018787261
+#> 12    black 0.025433288
+#> 13    lstat 0.428257321
 model$plot_feature_importance()
 ```
 
@@ -111,7 +97,7 @@ model$plot_feature_importance()
 
 ``` r
 model$predict(x_test)%>%head()
-#> [1] 34.23474 33.42219 18.28495 19.38057 18.81116 20.82490
+#> [1] 32.59258 24.76969 20.14197 18.13234 21.02914 20.25172
 ```
 
 Classification example:
@@ -134,43 +120,36 @@ x_test = test[,2:10]
 y_test = as.integer(test[,11])
 
 
-model <- NGBClassifier$new(Dist = Dist("k_categorical", K = 3),
-                           Base=DecisionTreeRegressor(criterion='friedman_mse', 
-                                                      max_depth=2),
+model <- NGBClassifier$new(Dist = Dist("k_categorical", k = 3),
+                           Base = sklearner(),
                            Score = Scores("LogScore"),
-                           natural_gradient=TRUE,
-                           n_estimators=500,
-                           learning_rate=0.01,
-                           minibatch_frac=1.0,
-                           col_sample=0.2,
-                           verbose=TRUE,
-                           verbose_eval=100,
-                           tol=1e-5,
+                           natural_gradient = TRUE,
+                           n_estimators = 100,
+                           tol = 1e-5,
                            random_state = NULL)
 
 model$fit(x_train, y_train, X_val = x_test, Y_val = y_test)
 
 model$feature_importances()
-#>           features   importance
-#> 1     Cl.thickness 2.686847e-02
-#> 2        Cell.size 2.686847e-02
-#> 3       Cell.shape 2.314226e-01
-#> 4    Marg.adhesion 2.314226e-01
-#> 5     Epith.c.size 1.833539e-01
-#> 6      Bare.nuclei 1.833539e-01
-#> 7      Bl.cromatin 9.613797e-02
-#> 8  Normal.nucleoli 9.613797e-02
-#> 9          Mitoses 1.897563e-01
-#> 10    Cl.thickness 1.897563e-01
-#> 11       Cell.size 1.633080e-01
-#> 12      Cell.shape 1.633080e-01
-#> 13   Marg.adhesion 8.228391e-02
-#> 14    Epith.c.size 8.228391e-02
-#> 15     Bare.nuclei 2.946694e-07
-#> 16     Bl.cromatin 2.946694e-07
-#> 17 Normal.nucleoli 2.686855e-02
-#> 18         Mitoses 2.686855e-02
-
+#>           features  importance
+#> 1     Cl.thickness 0.060005775
+#> 2        Cell.size 0.056244052
+#> 3       Cell.shape 0.742055551
+#> 4    Marg.adhesion 0.748501956
+#> 5     Epith.c.size 0.072877639
+#> 6      Bare.nuclei 0.069732522
+#> 7      Bl.cromatin 0.010621672
+#> 8  Normal.nucleoli 0.011418023
+#> 9          Mitoses 0.011649645
+#> 10    Cl.thickness 0.017591782
+#> 11       Cell.size 0.053283960
+#> 12      Cell.shape 0.052676274
+#> 13   Marg.adhesion 0.026254546
+#> 14    Epith.c.size 0.024599767
+#> 15     Bare.nuclei 0.017100762
+#> 16     Bl.cromatin 0.015321701
+#> 17 Normal.nucleoli 0.006150452
+#> 18         Mitoses 0.003913924
 model$plot_feature_importance()
 ```
 
@@ -178,18 +157,17 @@ model$plot_feature_importance()
 
 ``` r
 model$predict(x_test)
-#>   [1] 0 1 0 0 1 1 1 0 1 0 1 0 0 1 0 1 0 0 1 1 1 1 0 1 0 1 0 0 0 0 0 1 1 0 1 1 1
-#>  [38] 1 1 1 1 1 1 0 1 0 0 1 0 0 0 0 0 1 0 0 1 0 1 0 1 1 0 1 1 0 0 0 1 1 1 1 0 1
-#>  [75] 1 1 1 0 0 1 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1
-#> [112] 1 1 0 0 1 0 1 1 1 1 0 1 1 1 0 1 1 0 1 1 1 1 1 0 0 1 1 0 1 1 1 0 0 0 1 0 1
-#> [149] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1
-
+#>   [1] 1 1 2 1 1 2 2 1 1 2 2 2 1 2 2 1 1 1 1 1 1 2 2 1 1 1 1 1 1 1 1 1 1 1 2 1 2
+#>  [38] 2 1 1 1 2 1 1 2 1 2 1 1 2 2 2 2 2 1 1 2 1 2 2 2 1 2 1 1 2 2 2 1 1 2 1 2 2
+#>  [75] 1 1 2 1 1 1 2 2 1 2 1 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1
+#> [112] 2 2 1 1 1 1 1 2 2 1 1 1 1 1 2 1 2 1 1 2 1 1 1 1 1 1 2 1 1 1 1 2 1 1 1 2 1
+#> [149] 1 1 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 model$predict_proba(x_test)%>%head()
-#>           [,1]      [,2]        [,3]
-#> [1,] 0.4460589 0.3549772 0.198963930
-#> [2,] 0.4090228 0.5846611 0.006316089
-#> [3,] 0.4439496 0.3597499 0.196300514
-#> [4,] 0.4135137 0.2796083 0.306877995
-#> [5,] 0.4090228 0.5846611 0.006316089
-#> [6,] 0.4690924 0.4778495 0.053058101
+#>             [,1]         [,2]         [,3]
+#> [1,] 2.06395e-15 1.000000e+00 1.207698e-15
+#> [2,] 2.06395e-15 1.000000e+00 1.207698e-15
+#> [3,] 2.06395e-15 1.207698e-15 1.000000e+00
+#> [4,] 2.06395e-15 1.000000e+00 1.207698e-15
+#> [5,] 2.06395e-15 1.000000e+00 1.207698e-15
+#> [6,] 2.06395e-15 1.207698e-15 1.000000e+00
 ```
