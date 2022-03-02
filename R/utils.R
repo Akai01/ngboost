@@ -50,7 +50,7 @@ Dist <- function(dist = c("Normal", "Bernoulli", "k_categorical", "StudentT",
   out
 }
 
-#' Select a rule to compare probabilistic predictions P̂ to the observed data y.
+#' Select a rule to compare probabilistic predictions to the observed data.
 #' A score from ngboost.scores, e.g. LogScore.
 #' @param score A string. can be one of the following:
 #' \itemize{

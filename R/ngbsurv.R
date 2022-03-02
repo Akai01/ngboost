@@ -14,8 +14,8 @@ NGBSurvival <- R6::R6Class(
     #' @description Initialize NGBoost Survival model.
     #' @param Dist Assumed distributional form of Y|X=x.
     #' @param A Distribution from ngboost.distns, e.g. Normal
-    #' @param Score Rule to compare probabilistic predictions P̂ to the observed
-    #' data y.A score from ngboost.scores, e.g. LogScore
+    #' @param Score Rule to compare probabilistic predictions to the observed
+    #' data. A score from ngboost.scores, e.g. LogScore
     #' @param Base Base learner to use in the boosting algorithm.
     #' Any instantiated sklearn regressor, e.g. DecisionTreeRegressor()
     #' @param natural_gradient Logical flag indicating whether the natural gradient should be used

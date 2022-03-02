@@ -55,8 +55,8 @@ Initialize NGBoost Survival model.
 \describe{
 \item{\code{Dist}}{Assumed distributional form of Y|X=x.}
 
-\item{\code{Score}}{Rule to compare probabilistic predictions P̂ to the observed
-data y.A score from ngboost.scores, e.g. LogScore}
+\item{\code{Score}}{Rule to compare probabilistic predictions to the observed
+data. A score from ngboost.scores, e.g. LogScore}
 
 \item{\code{Base}}{Base learner to use in the boosting algorithm.
 Any instantiated sklearn regressor, e.g. DecisionTreeRegressor()}
