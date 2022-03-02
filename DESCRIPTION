@@ -22,8 +22,8 @@ Depends:
 Config/reticulate:
   list(
   packages = list(
-  list(package = 'importlib-metadata', pip = TRUE, envname = "r-ngboost", method = "conda"), 
-  list(package = 'ngboost', pip = TRUE, envname = "r-ngboost", method = "conda"))
+  list(package = 'importlib-metadata', pip = TRUE, envname = "r-ngboost", method = "virtualenv"), 
+  list(package = 'ngboost', pip = TRUE, envname = "r-ngboost", method = "virtualenv"))
   )
 Suggests: 
     testthat (>= 3.0.0)
