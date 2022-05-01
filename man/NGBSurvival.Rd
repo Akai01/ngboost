@@ -293,8 +293,12 @@ iterations.}
 }
 \if{html}{\out{</div>}}
 }
+\subsection{Details}{
+See for available methods \code{\link{NgbDist}}
+}
+
 \subsection{Returns}{
-A NGBoost distribution object
+A NgbDist Class
 }
 }
 \if{html}{\out{<hr>}}

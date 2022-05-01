@@ -195,10 +195,13 @@ NGBSurvival <- R6::R6Class(
     #' numeric format.
     #' @param max_iter get the prediction at the specified number of boosting
     #'  iterations.
-    #' @return A NGBoost distribution object
+    #' @return A NgbDist Class
+    #'
+    #' @details See for available methods \code{\link{NgbDist}}
+    #'
     pred_dist = function(X, max_iter=NULL){
       model = private$model
-      model$pred_dist(X = X, max_iter=max_iter)
+      NgbDist$new(model$pred_dist(X = X, max_iter=max_iter))
     }
   ),
   private = list(Dist = NULL,
