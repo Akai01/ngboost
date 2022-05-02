@@ -85,6 +85,14 @@ model$plot_feature_importance()
 
 model$predict(x_test)%>%head()
 
+distt <- model$pred_dist(x_test) # it returns a NGBDist
+
+class(distt)
+
+?NGBDist # see the available methods
+
+distt$interval(confidence = .9)
+
 ```
 
 Classification example:

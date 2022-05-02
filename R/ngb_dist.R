@@ -2,13 +2,13 @@
 #'
 #' @export
 #' @author Resul Akay
-NgbDist <- R6::R6Class(
-  classname = "NgbDist",
+NGBDist <- R6::R6Class(
+  classname = "NGBDist",
   public = list(
     #' @description Initialize the NGBoost distribution object.
     #' It is initialize internally.
     #' @param x A python ngboost.distns.distn.Distn.uncensor object
-    #' @returns A NgbDist Class
+    #' @returns A NGBDist Class
     initialize = function(x){
       private$dist <- x
       return(self)
