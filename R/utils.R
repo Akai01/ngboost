@@ -56,8 +56,10 @@ Dist <- function(dist = c("Normal", "Bernoulli", "k_categorical", "StudentT",
 #' \itemize{
 #'
 #'  \item LogScore : Generic class for the log scoring rule.
-#'  \item CRPS : Generic class for the continuous ranked probability scoring rule.
-#'  \item CRPScore : Generic class for the continuous ranked probability scoring rule.
+#'  \item CRPS : Generic class for the continuous ranked probability scoring
+#'  rule.
+#'  \item CRPScore : Generic class for the continuous ranked probability
+#'  scoring rule.
 #'  \item MLE : Generic class for the log scoring rule.
 #'  }
 #' @author Resul Akay

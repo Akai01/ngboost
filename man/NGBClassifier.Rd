@@ -29,8 +29,8 @@ y_test = as.integer(test[,11])
 
 
 model <- NGBClassifier$new(Dist = Dist("k_categorical", K = 3),
-                           Base=DecisionTreeRegressor(criterion='friedman_mse',
-                                                      max_depth=2),
+                           Base=DecisionTreeRegressor(
+                           criterion='friedman_mse', max_depth=2),
                            Score = Scores("LogScore"),
                            natural_gradient=TRUE,
                            n_estimators=500,
@@ -111,19 +111,24 @@ data.A score from ngboost.scores, e.g. LogScore}
 \item{\code{Base}}{Base learner to use in the boosting algorithm.
 Any instantiated sklearn regressor, e.g. DecisionTreeRegressor()}
 
-\item{\code{natural_gradient}}{Logical flag indicating whether the natural gradient should be used}
+\item{\code{natural_gradient}}{Logical flag indicating whether the natural
+gradient should be used}
 
 \item{\code{n_estimators}}{The number of boosting iterations to fit}
 
 \item{\code{learning_rate}}{The learning rate}
 
-\item{\code{minibatch_frac}}{The percent subsample of rows to use in each boosting iteration}
+\item{\code{minibatch_frac}}{The percent subsample of rows to use in each
+boosting iteration}
 
-\item{\code{col_sample}}{The percent subsample of columns to use in each boosting iteration}
+\item{\code{col_sample}}{The percent subsample of columns to use in each
+boosting iteration}
 
-\item{\code{verbose}}{Flag indicating whether output should be printed during fitting}
+\item{\code{verbose}}{Flag indicating whether output should be printed
+during fitting}
 
-\item{\code{verbose_eval}}{Increment (in boosting iterations) at which output should be printed}
+\item{\code{verbose_eval}}{Increment (in boosting iterations) at which output
+should be printed}
 
 \item{\code{tol}}{Numerical tolerance to be used in optimization}
 
@@ -159,7 +164,8 @@ An NGBRegressor object that can be fit.
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{X}}{DataFrame object or List or numpy array of predictors (n x p) in Numeric format}
+\item{\code{X}}{DataFrame object or List or numpy array of predictors (n x p)
+in Numeric format}
 
 \item{\code{Y}}{DataFrame object or List or numpy array of outcomes (n)
 in numeric format. Should be floats for regression and integers from 0

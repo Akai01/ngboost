@@ -93,7 +93,8 @@ Probability density function evaluated at quantiles
 \if{html}{\out{<a id="method-logpdf"></a>}}
 \if{latex}{\out{\hypertarget{method-logpdf}{}}}
 \subsection{Method \code{logpdf()}}{
-Log of the probability density function at x of the given RV.
+Log of the probability density function at x of the given
+RV.
 This uses a more numerically accurate calculation if available.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{NGBDist$logpdf(quantiles)}\if{html}{\out{</div>}}
@@ -260,7 +261,8 @@ Confidence interval with equal areas around the median.
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{confidence}}{Probability that an rv will be drawn from the returned range.
+\item{\code{confidence}}{Probability that an rv will be drawn from the returned
+range.
 Each value should be in the range \code{0>= confidence <=1}.}
 }
 \if{html}{\out{</div>}}

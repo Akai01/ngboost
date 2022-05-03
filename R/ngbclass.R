@@ -24,8 +24,8 @@
 #'
 #'
 #' model <- NGBClassifier$new(Dist = Dist("k_categorical", K = 3),
-#'                            Base=DecisionTreeRegressor(criterion='friedman_mse',
-#'                                                       max_depth=2),
+#'                            Base=DecisionTreeRegressor(
+#'                            criterion='friedman_mse', max_depth=2),
 #'                            Score = Scores("LogScore"),
 #'                            natural_gradient=TRUE,
 #'                            n_estimators=500,
@@ -64,13 +64,18 @@ NGBClassifier <- R6::R6Class(
     #' data.A score from ngboost.scores, e.g. LogScore
     #' @param Base Base learner to use in the boosting algorithm.
     #' Any instantiated sklearn regressor, e.g. DecisionTreeRegressor()
-    #' @param natural_gradient Logical flag indicating whether the natural gradient should be used
+    #' @param natural_gradient Logical flag indicating whether the natural
+    #' gradient should be used
     #' @param n_estimators The number of boosting iterations to fit
     #' @param learning_rate The learning rate
-    #' @param minibatch_frac The percent subsample of rows to use in each boosting iteration
-    #' @param col_sample The percent subsample of columns to use in each boosting iteration
-    #' @param verbose Flag indicating whether output should be printed during fitting
-    #' @param verbose_eval Increment (in boosting iterations) at which output should be printed
+    #' @param minibatch_frac The percent subsample of rows to use in each
+    #' boosting iteration
+    #' @param col_sample The percent subsample of columns to use in each
+    #'  boosting iteration
+    #' @param verbose Flag indicating whether output should be printed
+    #' during fitting
+    #' @param verbose_eval Increment (in boosting iterations) at which output
+    #' should be printed
     #' @param tol Numerical tolerance to be used in optimization
     #' @param random_state Seed for reproducibility.
     #' @return An NGBRegressor object that can be fit.
@@ -118,7 +123,8 @@ NGBClassifier <- R6::R6Class(
       return(self)
     },
     #' @description An NGBRegressor object that can be fit.
-    #' @param X DataFrame object or List or numpy array of predictors (n x p) in Numeric format
+    #' @param X DataFrame object or List or numpy array of predictors (n x p)
+    #' in Numeric format
     #' @param Y DataFrame object or List or numpy array of outcomes (n)
     #' in numeric format. Should be floats for regression and integers from 0
     #'  to K-1 for K-class classification

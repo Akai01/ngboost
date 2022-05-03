@@ -2,8 +2,10 @@
 #' @description
 #' NGBSurvival is a wrapper for the generic NGBoost class that facilitates
 #' survival analysis.
+#'
 #' Use this class if you want to predict an outcome that could take an infinite
-#'  number of (ordered) values, but right-censoring is present in the observed data.
+#' number of (ordered) values, but right-censoring is present in the observed
+#' data.
 #'
 #' @author Resul Akay
 #' @importFrom R6 R6Class
@@ -18,13 +20,18 @@ NGBSurvival <- R6::R6Class(
     #' data. A score from ngboost.scores, e.g. LogScore
     #' @param Base Base learner to use in the boosting algorithm.
     #' Any instantiated sklearn regressor, e.g. DecisionTreeRegressor()
-    #' @param natural_gradient Logical flag indicating whether the natural gradient should be used
+    #' @param natural_gradient Logical flag indicating whether the natural
+    #' gradient should be used
     #' @param n_estimators The number of boosting iterations to fit
     #' @param learning_rate The learning rate
-    #' @param minibatch_frac The percent subsample of rows to use in each boosting iteration
-    #' @param col_sample The percent subsample of columns to use in each boosting iteration
-    #' @param verbose Flag indicating whether output should be printed during fitting
-    #' @param verbose_eval Increment (in boosting iterations) at which output should be printed
+    #' @param minibatch_frac The percent subsample of rows to use in each
+    #' boosting iteration
+    #' @param col_sample The percent subsample of columns to use in each
+    #' boosting iteration
+    #' @param verbose Flag indicating whether output should be printed during
+    #'  fitting
+    #' @param verbose_eval Increment (in boosting iterations) at which output
+    #'  should be printed
     #' @param tol Numerical tolerance to be used in optimization
     #' @param random_state Seed for reproducibility.
     #' @return An NGBRegressor object that can be fit.
@@ -53,7 +60,6 @@ NGBSurvival <- R6::R6Class(
       private$tol <- tol
       private$random_state <- random_state
 
-      #ngboost <- reticulate::import("ngboost")
       private$model <- ngboost$NGBSurvival(
         Dist = private$Dist,
         Score = private$Score,

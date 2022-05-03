@@ -31,7 +31,8 @@ NGBDist <- R6::R6Class(
     pdf = function(quantiles, ...){
       private$dist$pdf(quantiles)
     },
-    #' @description Log of the probability density function at x of the given RV.
+    #' @description Log of the probability density function at x of the given
+    #' RV.
     #' This uses a more numerically accurate calculation if available.
     #' @param quantiles The quantiles
     #'
@@ -109,7 +110,8 @@ NGBDist <- R6::R6Class(
     },
 
     #' @description Confidence interval with equal areas around the median.
-    #' @param confidence Probability that an rv will be drawn from the returned range.
+    #' @param confidence Probability that an rv will be drawn from the returned
+    #' range.
     #' Each value should be in the range \code{0>= confidence <=1}.
     #'
     #' @return nd-points of range that contain \code{100 * confidence} of

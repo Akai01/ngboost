@@ -6,8 +6,10 @@
 \description{
 NGBSurvival is a wrapper for the generic NGBoost class that facilitates
 survival analysis.
+
 Use this class if you want to predict an outcome that could take an infinite
-number of (ordered) values, but right-censoring is present in the observed data.
+number of (ordered) values, but right-censoring is present in the observed
+data.
 }
 \author{
 Resul Akay
@@ -61,19 +63,24 @@ data. A score from ngboost.scores, e.g. LogScore}
 \item{\code{Base}}{Base learner to use in the boosting algorithm.
 Any instantiated sklearn regressor, e.g. DecisionTreeRegressor()}
 
-\item{\code{natural_gradient}}{Logical flag indicating whether the natural gradient should be used}
+\item{\code{natural_gradient}}{Logical flag indicating whether the natural
+gradient should be used}
 
 \item{\code{n_estimators}}{The number of boosting iterations to fit}
 
 \item{\code{learning_rate}}{The learning rate}
 
-\item{\code{minibatch_frac}}{The percent subsample of rows to use in each boosting iteration}
+\item{\code{minibatch_frac}}{The percent subsample of rows to use in each
+boosting iteration}
 
-\item{\code{col_sample}}{The percent subsample of columns to use in each boosting iteration}
+\item{\code{col_sample}}{The percent subsample of columns to use in each
+boosting iteration}
 
-\item{\code{verbose}}{Flag indicating whether output should be printed during fitting}
+\item{\code{verbose}}{Flag indicating whether output should be printed during
+fitting}
 
-\item{\code{verbose_eval}}{Increment (in boosting iterations) at which output should be printed}
+\item{\code{verbose_eval}}{Increment (in boosting iterations) at which output
+should be printed}
 
 \item{\code{tol}}{Numerical tolerance to be used in optimization}
 
