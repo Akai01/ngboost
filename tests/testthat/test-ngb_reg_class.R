@@ -1,5 +1,8 @@
 
 test_that("NGBRegression", {
+
+  if_not_ngboost_exist_skip()
+
   library(ngboost)
   set.seed(2022)
 
@@ -32,6 +35,9 @@ test_that("NGBRegression", {
 })
 
 test_that("NGBClassifier", {
+
+  if_not_ngboost_exist_skip()
+
   library(ngboost)
 
   set.seed(2022)

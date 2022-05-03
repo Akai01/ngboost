@@ -31,7 +31,6 @@ The goal of ngboost is to provide an R interface for the Python package [NGBoost
 You can install the released version of ngboost from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-# not yet
 
 install.packages("ngboost")
 ```
@@ -40,6 +39,7 @@ And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
+
 devtools::install_github("Akai01/ngboost")
 ```
 ## Example

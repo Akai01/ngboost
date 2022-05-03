@@ -1,5 +1,5 @@
 Package: ngboost
-Title: R interface to ngboost
+Title: R Interface to Ngboost
 Version: 0.1.0
 Authors@R: 
     person(given = "Resul",
