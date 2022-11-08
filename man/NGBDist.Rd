@@ -17,28 +17,28 @@ Resul Akay
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{NGBDist$new()}}
-\item \href{#method-rvs}{\code{NGBDist$rvs()}}
-\item \href{#method-pdf}{\code{NGBDist$pdf()}}
-\item \href{#method-logpdf}{\code{NGBDist$logpdf()}}
-\item \href{#method-cdf}{\code{NGBDist$cdf()}}
-\item \href{#method-logcdf}{\code{NGBDist$logcdf()}}
-\item \href{#method-sf}{\code{NGBDist$sf()}}
-\item \href{#method-logsf}{\code{NGBDist$logsf()}}
-\item \href{#method-ppf}{\code{NGBDist$ppf()}}
-\item \href{#method-isf}{\code{NGBDist$isf()}}
-\item \href{#method-entropy}{\code{NGBDist$entropy()}}
-\item \href{#method-interval}{\code{NGBDist$interval()}}
-\item \href{#method-mean}{\code{NGBDist$mean()}}
-\item \href{#method-median}{\code{NGBDist$median()}}
-\item \href{#method-std}{\code{NGBDist$std()}}
-\item \href{#method-var}{\code{NGBDist$var()}}
-\item \href{#method-clone}{\code{NGBDist$clone()}}
+\item \href{#method-NGBDist-new}{\code{NGBDist$new()}}
+\item \href{#method-NGBDist-rvs}{\code{NGBDist$rvs()}}
+\item \href{#method-NGBDist-pdf}{\code{NGBDist$pdf()}}
+\item \href{#method-NGBDist-logpdf}{\code{NGBDist$logpdf()}}
+\item \href{#method-NGBDist-cdf}{\code{NGBDist$cdf()}}
+\item \href{#method-NGBDist-logcdf}{\code{NGBDist$logcdf()}}
+\item \href{#method-NGBDist-sf}{\code{NGBDist$sf()}}
+\item \href{#method-NGBDist-logsf}{\code{NGBDist$logsf()}}
+\item \href{#method-NGBDist-ppf}{\code{NGBDist$ppf()}}
+\item \href{#method-NGBDist-isf}{\code{NGBDist$isf()}}
+\item \href{#method-NGBDist-entropy}{\code{NGBDist$entropy()}}
+\item \href{#method-NGBDist-interval}{\code{NGBDist$interval()}}
+\item \href{#method-NGBDist-mean}{\code{NGBDist$mean()}}
+\item \href{#method-NGBDist-median}{\code{NGBDist$median()}}
+\item \href{#method-NGBDist-std}{\code{NGBDist$std()}}
+\item \href{#method-NGBDist-var}{\code{NGBDist$var()}}
+\item \href{#method-NGBDist-clone}{\code{NGBDist$clone()}}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-NGBDist-new"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-new}{}}}
 \subsection{Method \code{new()}}{
 Initialize the NGBoost distribution object.
 It is initialize internally.
@@ -55,8 +55,8 @@ It is initialize internally.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-rvs"></a>}}
-\if{latex}{\out{\hypertarget{method-rvs}{}}}
+\if{html}{\out{<a id="method-NGBDist-rvs"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-rvs}{}}}
 \subsection{Method \code{rvs()}}{
 Random variates of given type.
 \subsection{Usage}{
@@ -68,8 +68,8 @@ Random variates
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-pdf"></a>}}
-\if{latex}{\out{\hypertarget{method-pdf}{}}}
+\if{html}{\out{<a id="method-NGBDist-pdf"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-pdf}{}}}
 \subsection{Method \code{pdf()}}{
 Probability density function at x of the given RV.
 \subsection{Usage}{
@@ -90,8 +90,8 @@ Probability density function evaluated at quantiles
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-logpdf"></a>}}
-\if{latex}{\out{\hypertarget{method-logpdf}{}}}
+\if{html}{\out{<a id="method-NGBDist-logpdf"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-logpdf}{}}}
 \subsection{Method \code{logpdf()}}{
 Log of the probability density function at x of the given
 RV.
@@ -112,8 +112,8 @@ Log of the probability density function evaluated at quantiles
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-cdf"></a>}}
-\if{latex}{\out{\hypertarget{method-cdf}{}}}
+\if{html}{\out{<a id="method-NGBDist-cdf"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-cdf}{}}}
 \subsection{Method \code{cdf()}}{
 Cumulative distribution function of the given RV.
 \subsection{Usage}{
@@ -132,8 +132,8 @@ Cumulative distribution function evaluated at quantiles
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-logcdf"></a>}}
-\if{latex}{\out{\hypertarget{method-logcdf}{}}}
+\if{html}{\out{<a id="method-NGBDist-logcdf"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-logcdf}{}}}
 \subsection{Method \code{logcdf()}}{
 Log of the cumulative distribution function at x of the
 given RV.
@@ -154,8 +154,8 @@ quantiles.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-sf"></a>}}
-\if{latex}{\out{\hypertarget{method-sf}{}}}
+\if{html}{\out{<a id="method-NGBDist-sf"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-sf}{}}}
 \subsection{Method \code{sf()}}{
 Survival function (1 - 'cdf') at x of the given RV.
 \subsection{Usage}{
@@ -174,8 +174,8 @@ Survival function evaluated at quantiles
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-logsf"></a>}}
-\if{latex}{\out{\hypertarget{method-logsf}{}}}
+\if{html}{\out{<a id="method-NGBDist-logsf"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-logsf}{}}}
 \subsection{Method \code{logsf()}}{
 Log of the survival function of the given RV.
 \subsection{Usage}{
@@ -193,8 +193,8 @@ Log of the survival function of the given RV.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-ppf"></a>}}
-\if{latex}{\out{\hypertarget{method-ppf}{}}}
+\if{html}{\out{<a id="method-NGBDist-ppf"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-ppf}{}}}
 \subsection{Method \code{ppf()}}{
 Percent point function (inverse of 'cdf') at q of the
 given RV.
@@ -216,8 +216,8 @@ quantile corresponding to the lower tail probability q
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-isf"></a>}}
-\if{latex}{\out{\hypertarget{method-isf}{}}}
+\if{html}{\out{<a id="method-NGBDist-isf"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-isf}{}}}
 \subsection{Method \code{isf()}}{
 Inverse survival function (inverse of sf) at q of the
 given RV.
@@ -237,8 +237,8 @@ Quantile corresponding to the upper tail probability, q.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-entropy"></a>}}
-\if{latex}{\out{\hypertarget{method-entropy}{}}}
+\if{html}{\out{<a id="method-NGBDist-entropy"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-entropy}{}}}
 \subsection{Method \code{entropy()}}{
 Differential entropy.
 \subsection{Usage}{
@@ -250,8 +250,8 @@ Differential entropy
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-interval"></a>}}
-\if{latex}{\out{\hypertarget{method-interval}{}}}
+\if{html}{\out{<a id="method-NGBDist-interval"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-interval}{}}}
 \subsection{Method \code{interval()}}{
 Confidence interval with equal areas around the median.
 \subsection{Usage}{
@@ -273,8 +273,8 @@ the rv's possible values.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-mean"></a>}}
-\if{latex}{\out{\hypertarget{method-mean}{}}}
+\if{html}{\out{<a id="method-NGBDist-mean"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-mean}{}}}
 \subsection{Method \code{mean()}}{
 Mean of the distribution.
 \subsection{Usage}{
@@ -286,8 +286,8 @@ The mean of the distribution
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-median"></a>}}
-\if{latex}{\out{\hypertarget{method-median}{}}}
+\if{html}{\out{<a id="method-NGBDist-median"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-median}{}}}
 \subsection{Method \code{median()}}{
 Median of the distribution.
 \subsection{Usage}{
@@ -299,8 +299,8 @@ The median of the distribution
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-std"></a>}}
-\if{latex}{\out{\hypertarget{method-std}{}}}
+\if{html}{\out{<a id="method-NGBDist-std"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-std}{}}}
 \subsection{Method \code{std()}}{
 Standard deviation of the distribution
 \subsection{Usage}{
@@ -312,8 +312,8 @@ The standard deviation of the distribution
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-var"></a>}}
-\if{latex}{\out{\hypertarget{method-var}{}}}
+\if{html}{\out{<a id="method-NGBDist-var"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-var}{}}}
 \subsection{Method \code{var()}}{
 Variance of the distribution.
 \subsection{Usage}{
@@ -325,8 +325,8 @@ The variance of the distribution.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-NGBDist-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBDist-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

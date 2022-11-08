@@ -17,22 +17,22 @@ Resul Akay
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{NGBSurvival$new()}}
-\item \href{#method-fit}{\code{NGBSurvival$fit()}}
-\item \href{#method-feature_importances}{\code{NGBSurvival$feature_importances()}}
-\item \href{#method-plot_feature_importance}{\code{NGBSurvival$plot_feature_importance()}}
-\item \href{#method-predict}{\code{NGBSurvival$predict()}}
-\item \href{#method-staged_pred_dist}{\code{NGBSurvival$staged_pred_dist()}}
-\item \href{#method-staged_pred}{\code{NGBSurvival$staged_pred()}}
-\item \href{#method-set_params}{\code{NGBSurvival$set_params()}}
-\item \href{#method-get_params}{\code{NGBSurvival$get_params()}}
-\item \href{#method-pred_dist}{\code{NGBSurvival$pred_dist()}}
-\item \href{#method-clone}{\code{NGBSurvival$clone()}}
+\item \href{#method-NGBSurvival-new}{\code{NGBSurvival$new()}}
+\item \href{#method-NGBSurvival-fit}{\code{NGBSurvival$fit()}}
+\item \href{#method-NGBSurvival-feature_importances}{\code{NGBSurvival$feature_importances()}}
+\item \href{#method-NGBSurvival-plot_feature_importance}{\code{NGBSurvival$plot_feature_importance()}}
+\item \href{#method-NGBSurvival-predict}{\code{NGBSurvival$predict()}}
+\item \href{#method-NGBSurvival-staged_pred_dist}{\code{NGBSurvival$staged_pred_dist()}}
+\item \href{#method-NGBSurvival-staged_pred}{\code{NGBSurvival$staged_pred()}}
+\item \href{#method-NGBSurvival-set_params}{\code{NGBSurvival$set_params()}}
+\item \href{#method-NGBSurvival-get_params}{\code{NGBSurvival$get_params()}}
+\item \href{#method-NGBSurvival-pred_dist}{\code{NGBSurvival$pred_dist()}}
+\item \href{#method-NGBSurvival-clone}{\code{NGBSurvival$clone()}}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-NGBSurvival-new"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBSurvival-new}{}}}
 \subsection{Method \code{new()}}{
 Initialize NGBoost Survival model.
 \subsection{Usage}{
@@ -95,8 +95,8 @@ An NGBRegressor object that can be fit.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-fit"></a>}}
-\if{latex}{\out{\hypertarget{method-fit}{}}}
+\if{html}{\out{<a id="method-NGBSurvival-fit"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBSurvival-fit}{}}}
 \subsection{Method \code{fit()}}{
 Fits an NGBoost survival model to the data.
 For additional parameters see ngboost.NGboost.fit
@@ -135,8 +135,8 @@ NULL
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-feature_importances"></a>}}
-\if{latex}{\out{\hypertarget{method-feature_importances}{}}}
+\if{html}{\out{<a id="method-NGBSurvival-feature_importances"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBSurvival-feature_importances}{}}}
 \subsection{Method \code{feature_importances()}}{
 Return the feature importances for all parameters in the
 distribution (the higher, the more important the feature).
@@ -149,8 +149,8 @@ A data frame
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-plot_feature_importance"></a>}}
-\if{latex}{\out{\hypertarget{method-plot_feature_importance}{}}}
+\if{html}{\out{<a id="method-NGBSurvival-plot_feature_importance"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBSurvival-plot_feature_importance}{}}}
 \subsection{Method \code{plot_feature_importance()}}{
 Plot feature importance
 \subsection{Usage}{
@@ -159,8 +159,8 @@ Plot feature importance
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-predict"></a>}}
-\if{latex}{\out{\hypertarget{method-predict}{}}}
+\if{html}{\out{<a id="method-NGBSurvival-predict"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBSurvival-predict}{}}}
 \subsection{Method \code{predict()}}{
 Point prediction of Y at the points X=x
 \subsection{Usage}{
@@ -183,8 +183,8 @@ Numpy array of the estimates of Y
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-staged_pred_dist"></a>}}
-\if{latex}{\out{\hypertarget{method-staged_pred_dist}{}}}
+\if{html}{\out{<a id="method-NGBSurvival-staged_pred_dist"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBSurvival-staged_pred_dist}{}}}
 \subsection{Method \code{staged_pred_dist()}}{
 Predict the conditional distribution of Y at the points X=x
 at multiple boosting iterations
@@ -209,8 +209,8 @@ up to max_iter.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-staged_pred"></a>}}
-\if{latex}{\out{\hypertarget{method-staged_pred}{}}}
+\if{html}{\out{<a id="method-NGBSurvival-staged_pred"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBSurvival-staged_pred}{}}}
 \subsection{Method \code{staged_pred()}}{
 Point prediction of Y at the points X=x at multiple boosting
 iterations.
@@ -235,8 +235,8 @@ up to max_iter.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_params"></a>}}
-\if{latex}{\out{\hypertarget{method-set_params}{}}}
+\if{html}{\out{<a id="method-NGBSurvival-set_params"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBSurvival-set_params}{}}}
 \subsection{Method \code{set_params()}}{
 Set the parameters of this estimator.
 The method works on simple estimators as well as on nested objects
@@ -259,8 +259,8 @@ self : estimator instance. Estimator instance.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get_params"></a>}}
-\if{latex}{\out{\hypertarget{method-get_params}{}}}
+\if{html}{\out{<a id="method-NGBSurvival-get_params"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBSurvival-get_params}{}}}
 \subsection{Method \code{get_params()}}{
 Get parameters for this estimator.
 \subsection{Usage}{
@@ -281,8 +281,8 @@ params. A dict (R list). Parameter names mapped to their values.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-pred_dist"></a>}}
-\if{latex}{\out{\hypertarget{method-pred_dist}{}}}
+\if{html}{\out{<a id="method-NGBSurvival-pred_dist"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBSurvival-pred_dist}{}}}
 \subsection{Method \code{pred_dist()}}{
 Predict the conditional distribution of Y at the points X=x
 \subsection{Usage}{
@@ -309,8 +309,8 @@ A NGBDist Class
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-NGBSurvival-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBSurvival-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

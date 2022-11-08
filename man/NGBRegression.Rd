@@ -64,22 +64,22 @@ Resul Akay
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{NGBRegression$new()}}
-\item \href{#method-fit}{\code{NGBRegression$fit()}}
-\item \href{#method-feature_importances}{\code{NGBRegression$feature_importances()}}
-\item \href{#method-plot_feature_importance}{\code{NGBRegression$plot_feature_importance()}}
-\item \href{#method-predict}{\code{NGBRegression$predict()}}
-\item \href{#method-staged_pred_dist}{\code{NGBRegression$staged_pred_dist()}}
-\item \href{#method-staged_pred}{\code{NGBRegression$staged_pred()}}
-\item \href{#method-set_params}{\code{NGBRegression$set_params()}}
-\item \href{#method-get_params}{\code{NGBRegression$get_params()}}
-\item \href{#method-pred_dist}{\code{NGBRegression$pred_dist()}}
-\item \href{#method-clone}{\code{NGBRegression$clone()}}
+\item \href{#method-NGBRegression-new}{\code{NGBRegression$new()}}
+\item \href{#method-NGBRegression-fit}{\code{NGBRegression$fit()}}
+\item \href{#method-NGBRegression-feature_importances}{\code{NGBRegression$feature_importances()}}
+\item \href{#method-NGBRegression-plot_feature_importance}{\code{NGBRegression$plot_feature_importance()}}
+\item \href{#method-NGBRegression-predict}{\code{NGBRegression$predict()}}
+\item \href{#method-NGBRegression-staged_pred_dist}{\code{NGBRegression$staged_pred_dist()}}
+\item \href{#method-NGBRegression-staged_pred}{\code{NGBRegression$staged_pred()}}
+\item \href{#method-NGBRegression-set_params}{\code{NGBRegression$set_params()}}
+\item \href{#method-NGBRegression-get_params}{\code{NGBRegression$get_params()}}
+\item \href{#method-NGBRegression-pred_dist}{\code{NGBRegression$pred_dist()}}
+\item \href{#method-NGBRegression-clone}{\code{NGBRegression$clone()}}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-NGBRegression-new"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBRegression-new}{}}}
 \subsection{Method \code{new()}}{
 Initialize NGBoost regression model.
 \subsection{Usage}{
@@ -142,8 +142,8 @@ An NGBRegressor object that can be fit.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-fit"></a>}}
-\if{latex}{\out{\hypertarget{method-fit}{}}}
+\if{html}{\out{<a id="method-NGBRegression-fit"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBRegression-fit}{}}}
 \subsection{Method \code{fit()}}{
 An NGBRegressor object that can be fit.
 \subsection{Usage}{
@@ -201,8 +201,8 @@ NULL
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-feature_importances"></a>}}
-\if{latex}{\out{\hypertarget{method-feature_importances}{}}}
+\if{html}{\out{<a id="method-NGBRegression-feature_importances"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBRegression-feature_importances}{}}}
 \subsection{Method \code{feature_importances()}}{
 Return the feature importances for all parameters in the
 distribution (the higher, the more important the feature).
@@ -215,8 +215,8 @@ A data frame
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-plot_feature_importance"></a>}}
-\if{latex}{\out{\hypertarget{method-plot_feature_importance}{}}}
+\if{html}{\out{<a id="method-NGBRegression-plot_feature_importance"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBRegression-plot_feature_importance}{}}}
 \subsection{Method \code{plot_feature_importance()}}{
 Plot feature importance
 \subsection{Usage}{
@@ -225,8 +225,8 @@ Plot feature importance
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-predict"></a>}}
-\if{latex}{\out{\hypertarget{method-predict}{}}}
+\if{html}{\out{<a id="method-NGBRegression-predict"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBRegression-predict}{}}}
 \subsection{Method \code{predict()}}{
 Point prediction of Y at the points X=x
 \subsection{Usage}{
@@ -249,8 +249,8 @@ Numpy array of the estimates of Y
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-staged_pred_dist"></a>}}
-\if{latex}{\out{\hypertarget{method-staged_pred_dist}{}}}
+\if{html}{\out{<a id="method-NGBRegression-staged_pred_dist"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBRegression-staged_pred_dist}{}}}
 \subsection{Method \code{staged_pred_dist()}}{
 Predict the conditional distribution of Y at the points X=x
 at multiple boosting iterations
@@ -275,8 +275,8 @@ up to max_iter.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-staged_pred"></a>}}
-\if{latex}{\out{\hypertarget{method-staged_pred}{}}}
+\if{html}{\out{<a id="method-NGBRegression-staged_pred"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBRegression-staged_pred}{}}}
 \subsection{Method \code{staged_pred()}}{
 Point prediction of Y at the points X=x at multiple boosting
 iterations.
@@ -301,8 +301,8 @@ up to max_iter.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_params"></a>}}
-\if{latex}{\out{\hypertarget{method-set_params}{}}}
+\if{html}{\out{<a id="method-NGBRegression-set_params"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBRegression-set_params}{}}}
 \subsection{Method \code{set_params()}}{
 Set the parameters of this estimator.
 The method works on simple estimators as well as on nested objects
@@ -325,8 +325,8 @@ self : estimator instance. Estimator instance.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get_params"></a>}}
-\if{latex}{\out{\hypertarget{method-get_params}{}}}
+\if{html}{\out{<a id="method-NGBRegression-get_params"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBRegression-get_params}{}}}
 \subsection{Method \code{get_params()}}{
 Get parameters for this estimator.
 \subsection{Usage}{
@@ -347,8 +347,8 @@ params. A dict (R list). Parameter names mapped to their values.
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-pred_dist"></a>}}
-\if{latex}{\out{\hypertarget{method-pred_dist}{}}}
+\if{html}{\out{<a id="method-NGBRegression-pred_dist"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBRegression-pred_dist}{}}}
 \subsection{Method \code{pred_dist()}}{
 Predict the conditional distribution of Y at the points X=x
 \subsection{Usage}{
@@ -375,8 +375,8 @@ A NGBDist Class
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-NGBRegression-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-NGBRegression-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{
