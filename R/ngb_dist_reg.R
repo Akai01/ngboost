@@ -1,9 +1,9 @@
-#' NGBoost distribution object
+#' NGBoost regression distribution object
 #'
 #' @export
 #' @author Resul Akay
-NGBDist <- R6::R6Class(
-  classname = "NGBDist",
+NGBDistReg <- R6::R6Class(
+  classname = "NGBDistReg",
   public = list(
     #' @description Initialize the NGBoost distribution object.
     #' It is initialize internally.

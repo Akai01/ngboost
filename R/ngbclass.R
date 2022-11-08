@@ -286,13 +286,13 @@ NGBClassifier <- R6::R6Class(
     #' numeric format.
     #' @param max_iter get the prediction at the specified number of boosting
     #'  iterations.
-    #' @return A NGBDist Class
+    #' @return A NGBDistClass Class
     #'
-    #' @details See for available methods \code{\link{NGBDist}}
+    #' @details See for available methods \code{\link{NGBDistClass}}
     #'
     pred_dist = function(X, max_iter=NULL){
       model = private$model
-      NGBDist$new(model$pred_dist(X = X, max_iter=max_iter))
+      NGBDistClass$new(model$pred_dist(X = X, max_iter=max_iter))
     }
   ),
   private = list(Dist = NULL,

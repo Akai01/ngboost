@@ -31,6 +31,8 @@ test_that("NGBRegression", {
 
   model$fit(X = x_train, Y = y_train, X_val = x_val, Y_val = y_val)
 
+  the_dist <- model$pred_dist(x_val)
+
   expect_equal(model$predict(x_val)[1], 10.05477, tolerance = 0.5)
 })
 
@@ -64,6 +66,8 @@ test_that("NGBClassifier", {
   model$fit(X = x_train, Y = y_train, X_val = x_val, Y_val = y_val)
 
   model$predict(x_val)[1]
+
+  the_dist <- model$pred_dist(x_val)
 
   expect_equal(model$predict(x_val)[1], 0,)
 })

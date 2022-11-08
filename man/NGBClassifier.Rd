@@ -416,11 +416,11 @@ iterations.}
 \if{html}{\out{</div>}}
 }
 \subsection{Details}{
-See for available methods \code{\link{NGBDist}}
+See for available methods \code{\link{NGBDistClass}}
 }
 
 \subsection{Returns}{
-A NGBDist Class
+A NGBDistClass Class
 }
 }
 \if{html}{\out{<hr>}}
